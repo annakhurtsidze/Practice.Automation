@@ -39,4 +39,8 @@ public class SetUp {
         log.info("Browser closed.");
     }
 
+    public void goBack(){
+        driver.navigate().back();
+    }
+
 }

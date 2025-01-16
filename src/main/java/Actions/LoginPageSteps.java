@@ -42,4 +42,12 @@ public class LoginPageSteps extends LoginElements {
         String enteredPasswordValue = driver.findElement(loginPassword).getAttribute("type");
         Assert.assertEquals(enteredPasswordValue, "password");
     }
+
+    public void checkIncorrectPasswordFlashIsPresented(){
+        Assert.assertTrue(driver.findElement(incorrectPasswordFlash).isDisplayed());
+    }
+
+    public void checkThatLoginDivIsPresented(){
+        Assert.assertTrue(driver.findElement(loginDiv).isDisplayed());
+    }
 }

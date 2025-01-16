@@ -31,4 +31,5 @@ public class MyAccountSteps extends MyAccountElements {
     public void clickLogout(){
         driver.findElement(logoutLink).click();
     }
+
 }

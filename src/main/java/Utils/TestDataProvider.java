@@ -39,4 +39,11 @@ public class TestDataProvider {
                 {"", ""},
         };
     }
+
+    @DataProvider(name = "caseSensitiveData")
+    public static Object[][] provideCaseSensitiveData() {
+        return new Object[][]{
+                {"Test12@12.12", "Test12@12.12"}
+        };
+    }
 }
