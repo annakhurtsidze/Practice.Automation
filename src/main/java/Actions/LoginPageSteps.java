@@ -29,4 +29,17 @@ public class LoginPageSteps extends LoginElements {
     public void checkWrongEmailFlashIsPresented(){
         Assert.assertTrue(driver.findElement(wrongEmailFlash).isDisplayed());
     }
+
+    public void checkPasswordRequiredFlashIsDisplayed(){
+        Assert.assertTrue(driver.findElement(passwordRequiredFlash).isDisplayed());
+    }
+
+    public void checkEmailRequiredFlashIsDisplayed(){
+        Assert.assertTrue(driver.findElement(emailRequiredFlash).isDisplayed());
+    }
+
+    public  void checkThatPasswordIsMasked(){
+        String enteredPasswordValue = driver.findElement(loginPassword).getAttribute("type");
+        Assert.assertEquals(enteredPasswordValue, "password");
+    }
 }

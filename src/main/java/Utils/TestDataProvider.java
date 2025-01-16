@@ -15,8 +15,28 @@ public class TestDataProvider {
     @DataProvider(name = "invalidLoginData")
     public static Object[][] provideInvalidLoginData() {
         return new Object[][]{
-                // Only the invalid test case
-                {"test2@23.fg", "test2@23.23"}
+                {"test2@23.fg", "test2@23.23"},
+        };
+    }
+
+    @DataProvider(name = "emptyPasswordData")
+    public static Object[][] provideEmptyPasswordData() {
+        return new Object[][]{
+                {"test2@23.fg", ""},
+        };
+    }
+
+    @DataProvider(name = "emptyEmailData")
+    public static Object[][] provideEmptyEmailData() {
+        return new Object[][]{
+                {"", "test2@23.fg"},
+        };
+    }
+
+    @DataProvider(name = "emptyEmailAndPasswordData")
+    public static Object[][] provideEmptyEmailAndPasswordData() {
+        return new Object[][]{
+                {"", ""},
         };
     }
 }

@@ -11,6 +11,8 @@ public class LoginElements {
     loginPassword = By.id("password"),
     loginButton = By.xpath("//input[@name='login']"),
 
-    wrongEmailFlash = By.xpath("//*[contains(text(), 'A user could not be found with this email address.')]");
+    wrongEmailFlash = By.xpath("//*[contains(text(), 'A user could not be found with this email address.')]"),
+    passwordRequiredFlash = By.xpath("//*[contains(text(), 'Password is required.')]"),
+    emailRequiredFlash = By.xpath("//*[contains(text(), 'Username is required.')]");
 
 }
